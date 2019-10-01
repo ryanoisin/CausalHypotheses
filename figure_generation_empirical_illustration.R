@@ -57,7 +57,7 @@ r2vec <- numeric(5)
 # loop through variables, calculating relative importance and predictability
 for(i in 1:5) {
   # reorder variables so each in turn is first
-  temp <- reorder2(riskcor.sub, c(names.sub[i], names.sub[seq(1:5)[-i]]))
+  temp <- reorder(riskcor.sub, c(names.sub[i], names.sub[seq(1:5)[-i]]))
   # Then estimate relative importance for each variable
   relmat[seq(1:5)[-i], i] <- calc.relimp(temp)$lmg
   # and the predictability of each variable
