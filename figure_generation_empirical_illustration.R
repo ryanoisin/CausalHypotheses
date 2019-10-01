@@ -32,7 +32,9 @@ data(riskcor)
 
 # Estimate the precision matrix using qgraph
 estimate <- qgraph::EBICglasso(riskcor, n = 69, returnAllResults = TRUE)
-omega <- estimate$optwi # returns the precision matrix
+# qgraph method estimates a non-symmetric omega matrix, but uses forceSymmetric to create
+# a symmetric matrix (see qgraph:::EBICglassoCore line 65)
+omega <- as.matrix(forceSymmetric(estimate$optwi)) # returns the precision matrix
 
 # Name the variables
 dimnames(omega) <- dimnames(riskcor)
