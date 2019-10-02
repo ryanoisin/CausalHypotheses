@@ -1,6 +1,6 @@
 ## Reproducibility Archive
 
-This reproducibility archive allows to reproduce all results & figures of the paper Ryan, Bringmann & Schuurman (2019) "The Challenge of Generating Causal Hypotheses using Network Models." [[PsyArXiv]](https://psyarxiv.com)
+This reproducibility archive allows to reproduce all results & figures of the paper Ryan, Bringmann & Schuurman (pre-print) "The Challenge of Generating Causal Hypotheses using Network Models." [[PsyArXiv]](https://psyarxiv.com/ryg69/)
 
 1. `figure_generation_main_text.R` reproduces all figures and results in Sections 1, 2,3 and Appendix A. The adjacency matrices for Figures 2, 3, 4(a), 4(b) are sourced from `create_graph_lists.R`
 2. `create_graph_lists.R` defines the adjacency matrices for Figures 2, 3, 4(a), 4(b)
